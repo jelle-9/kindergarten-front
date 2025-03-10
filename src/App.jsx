@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Tabsnavigator from './layouts/Tabsnavigator';
+import './styles/styles.css'
 
 
 function App() {
@@ -22,15 +24,24 @@ function App() {
     <>
       <Navbarlayout />
 
-      <ul>
+      <div id='mainContainer'> 
+        <Tabsnavigator className="tabs"/>
+        <div className='home'>
+            <h1>Welcom to KiDi-Soft GmbH</h1>
+        </div>
+      </div>
+
+      
+
+     {/* <ul>
         {
-          
+
         gruppen.map((gruppe) => (
           <li>{gruppe.gruppeName}</li>
         ))
 
         }
-      </ul>
+      </ul>*/}
     
     </>
   )
