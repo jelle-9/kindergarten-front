@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Tabsnavigator from './layouts/Tabsnavigator';
+import Cards from './layouts/Cards';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         <Tabsnavigator />
         
       </div>
-
+     
       
 
      {/* <ul>

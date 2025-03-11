@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+import Cards from './Cards';
 
 
 
@@ -49,8 +50,17 @@ function Tabsnavigator() {
 
             <Col sm={8}>
                 <Tab.Content>
-                    <Tab.Pane eventKey="#link1">Tab pane content 1</Tab.Pane>
-                    <Tab.Pane eventKey="#link2">Tab pane content 2</Tab.Pane>
+                    <Tab.Pane eventKey="#link1">
+                        Kinder 
+                        <Cards />	
+
+                    </Tab.Pane>
+
+                    <Tab.Pane eventKey="#link2">
+                        
+                        Tab pane content 2
+                    
+                    </Tab.Pane>
                 </Tab.Content>
             </Col>
         </Row>
