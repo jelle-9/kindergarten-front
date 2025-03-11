@@ -9,7 +9,7 @@ import Tab from 'react-bootstrap/Tab';
 function Tabsnavigator() {
     
   return (
-    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
+    <Tab.Container id="list-group-tabs-example" >
         <Row>
             <Col sm={4}>
                 <Accordion>

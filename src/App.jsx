@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Tabsnavigator from './layouts/Tabsnavigator';
+import Mainlayout from './layouts/Mainlayout';
 
 
 function App() {
@@ -16,29 +17,37 @@ function App() {
   const loadGruppen = async() =>{
 
       const result = await axios.get("http://localhost:8080/getAllGruppe");
-      console.log(result.data)
+      
     setGruppe(result.data);
   } 
+
+  
   return (
     <>
       <Navbarlayout />
 
       <div className='my-2'> 
-        <Tabsnavigator />
+    {/*    <Tabsnavigator />*/}
+        <Mainlayout />
         
       </div>
 
       
 
-     {/* <ul>
+     {
+     
+     /*
+      <ul>
         {
 
+       
         gruppen.map((gruppe) => (
           <li>{gruppe.gruppeName}</li>
         ))
 
         }
-      </ul>*/}
+      </ul>
+      */}
     
     </>
   )
