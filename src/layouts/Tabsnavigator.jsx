@@ -51,7 +51,7 @@ function Tabsnavigator() {
             <Col sm={8}>
                 <Tab.Content>
                     <Tab.Pane eventKey="#link1">
-                        Kinder 
+                         
                         <Cards />	
 
                     </Tab.Pane>
