@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Tabsnavigator from './layouts/Tabsnavigator';
 import Mainlayout from './layouts/Mainlayout';
+import Cards from './layouts/Cards';
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
         <Mainlayout />
         
       </div>
-
+     
       
 
      {
