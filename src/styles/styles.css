@@ -1,11 +1,14 @@
+
 .accordion {
     max-width: 20%;
-    display: inline-block;
+   
 }
 .home {
     max-width: 60%;
-    display: inline-block;
+   
 }
-#main  {
+
+#mainContainer {
     display: flex;
+    gap: 30px;
 }

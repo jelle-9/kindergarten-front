@@ -4,7 +4,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Tabsnavigator from './layouts/Tabsnavigator';
-import './styles/styles.css'
 
 
 function App() {
@@ -24,11 +23,9 @@ function App() {
     <>
       <Navbarlayout />
 
-      <div id='mainContainer'> 
-        <Tabsnavigator className="tabs"/>
-        <div className='home'>
-            <h1>Welcom to KiDi-Soft GmbH</h1>
-        </div>
+      <div className='my-2'> 
+        <Tabsnavigator />
+        
       </div>
 
       
