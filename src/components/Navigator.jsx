@@ -71,6 +71,27 @@ export default function Navigator(props) {
         ))
 
     }
+
+        {/* Map fuer das auesere Objekt, braucht einen index! */}
+        {Object.entries(liste).map(([key, values], index) => (
+                <Accordion.Item eventKey={`dynamic-${index}`} key={`dynamic-${index}`}>
+                    <Accordion.Header>{key}</Accordion.Header>
+                    <Accordion.Body>
+                    <ListGroup>
+                            {/* //Map fuer die Werte */}
+                            {values.map((item, itemIndex) => (
+                                <ListGroup.Item 
+                                    action 
+                                    href={`#${item}`}
+                                    key={`item-${itemIndex}`}
+                                >
+                                    {item}
+                                </ListGroup.Item>
+                            ))}
+                        </ListGroup>
+                    </Accordion.Body>
+                </Accordion.Item>
+            ))}
  
         
 
