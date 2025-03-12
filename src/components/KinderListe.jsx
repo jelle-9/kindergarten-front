@@ -13,7 +13,6 @@ export default function KinderListe() {
     const loadKinder = async() => {
         const result = await axios.get("http://localhost:8080/getAllKinder");
         setKinder(result.data);
-        console.log(result.data);
     }
 
 
