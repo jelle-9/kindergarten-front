@@ -1,4 +1,8 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Card, Button, Row, Col } from 'react-bootstrap';
+
 
 export default function GruppeListe() {
     const [gruppen, setGruppen] = useState([]);
@@ -6,9 +10,11 @@ export default function GruppeListe() {
         loadGruppen();
     }, [])
     const loadGruppen = async() => {
-        const result = await axios.get("http://localhost:8080/getAllGruppen");
+        const result = await axios.get("http://localhost:8080/getAllGruppe");
         setGruppen(result.data);
+        console.log(result.data);
     }
+
 
 
     console.log(gruppen);
