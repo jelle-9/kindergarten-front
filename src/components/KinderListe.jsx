@@ -3,6 +3,7 @@ import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Cards from '../layouts/Cards';
+import { Col, Row } from 'react-bootstrap';
 
 export default function KinderListe() {
     const [kinder, setKinder] = useState([]);
@@ -18,24 +19,25 @@ export default function KinderListe() {
 
     console.log(kinder);
   return (
-    <div>
+    <Row>
         {
             kinder.map((kind) => (
 
-
-                <Card key = {kind.kindId} style={{ width: '10rem' }}>
-                    <Card.Img variant="top" src="resources\images.jpg" alt="Upps!" />
-                    <Card.Body>
-                        <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {kind.kindVorname} </Card.Title>
-                        { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
-                            {kind.kindNachname} {'\n'}
-                            {kind.kindGeburtsdatum} {'\n'}
-                            {kind.besonderheiten} {'\n'}
-                        
-                        </Card.Text> }
-                        <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>
-                    </Card.Body>
-                </Card>
+                <Col  sm={4} md={3} lg={3} className='my-2'>
+                    <Card key = {kind.kindId} style={{ width: '10rem' }}>
+                        <Card.Img variant="top" src="resources\images.jpg" alt="Upps!" />
+                        <Card.Body>
+                            <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {kind.kindVorname} </Card.Title>
+                            { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
+                                {kind.kindNachname} {'\n'}
+                                {kind.kindGeburtsdatum} {'\n'}
+                                {kind.besonderheiten} {'\n'}
+                            
+                            </Card.Text> }
+                            <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
           
                 // <div key={kind.id}>
                 //     <h1>{kind.kindVorname}</h1>
@@ -50,7 +52,7 @@ export default function KinderListe() {
 
 
 
-    </div>
+    </Row>
     
   )
 }
