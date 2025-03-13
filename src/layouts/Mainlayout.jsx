@@ -6,6 +6,7 @@ import ElternListe from '../components/ElternListe'
 import MitarbeiterListe from '../components/MitarbeiterListe'
 import StandortListe from '../components/StandortListe'
 import GruppeListe from '../components/GruppeListe'
+import Formular from '../components/Formular'
 
 export default function Mainlayout() {
     
@@ -14,7 +15,8 @@ export default function Mainlayout() {
     "Eltern": ["Übersicht", "Eltern Bearbeiten", "Eltern Löschen"],
     "Mitarbeiter": ["Übersicht", "Mitarbeiter Bearbeiten", "Mitarbeiter Löschen"],
     "Standort": ["Übersicht", "Standort Bearbeiten", "Standort Löschen"],
-    "Gruppe": ["Übersicht", "Gruppe Bearbeiten", "Gruppe Löschen"]
+    "Gruppe": ["Übersicht", "Gruppe Bearbeiten", "Gruppe Löschen"],
+    "Neues Mitglied erstellen": ["Kind", "Eltern", "Mitarbeiter", "Standort", "Gruppe"]
    }
 
    const links = []
@@ -57,6 +59,12 @@ export default function Mainlayout() {
                     <Tab.Pane eventKey="#Gruppe">
 
                         <GruppeListe />
+
+                    </Tab.Pane>
+
+                    <Tab.Pane eventKey="#Neues Mitglied erstellen">
+
+                        <Formular />
 
                     </Tab.Pane>
 
