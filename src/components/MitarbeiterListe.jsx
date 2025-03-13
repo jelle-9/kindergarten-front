@@ -13,7 +13,6 @@ export default function MitarbeiterListe() {
   const loadMitarbeiter = async() => {
     const result = await axios.get("http://localhost:8080/mitarbeiter/getAllMitarbeiter");
     setMitarbeiter(result.data);
-    console.log(result.data);
   }
 
   return (
@@ -33,10 +32,27 @@ export default function MitarbeiterListe() {
                   {mitarbeiter.mitarbeiterTelefonnummer} {'\n'}
                   {mitarbeiter.mitarbeiterStrasseHausnr} {'\n'}
 
-                  {Object.entries(mitarbeiter.mitarbeiterPlz).map(([key, value], index) => 
-                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'}
-                  {Object.entries(mitarbeiter.mitarbeiterStandort).map(([key, value], index) => 
-                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
+                  {
+
+                  Object.entries(mitarbeiter.mitarbeiterPlz).map((plz, index) => 
+                  // 
+                  plz[1]  + ' '
+                ) 
+                  
+                  }  {'\n'}
+
+                  {
+
+                    /* Alte */
+                  Object.entries(mitarbeiter.mitarbeiterStandort).map((standort, index) => 
+
+                        /* Alternative Lösung. die index muss bekannt sein */
+                        index==2 ? <span key={index}>{standort[1]}</span>: null
+
+                  )
+                  
+                  }  {'\n'} 
+
                   {Object.entries(mitarbeiter.mitarbeiterGruppe).map(([key, value], index) => 
                   JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
                  
