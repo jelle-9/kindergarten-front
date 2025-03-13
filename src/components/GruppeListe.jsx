@@ -26,7 +26,6 @@ export default function GruppeListe() {
                             <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {gruppe.gruppeName} </Card.Title>
                             { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
                                 {gruppe.gruppeGroesse} {'\n'}
-                                {gruppe.gruppeLeiter} {'\n'}
                             
                             </Card.Text> }
                             <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>
