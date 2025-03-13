@@ -34,12 +34,15 @@ export default function MitarbeiterListe() {
                   {mitarbeiter.mitarbeiterStrasseHausnr} {'\n'}
 
                   {Object.entries(mitarbeiter.mitarbeiterPlz).map(([key, value], index) => 
-                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'}
-                  {Object.entries(mitarbeiter.mitarbeiterStandort).map(([key, value], index) => 
-                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
-                  {Object.entries(mitarbeiter.mitarbeiterGruppe).map(([key, value], index) => 
-                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
-                 
+                  JSON.stringify(value).replace(/"/g,' ')) }  {'\n'}
+
+                  {Object.entries(mitarbeiter.mitarbeiterStandort).filter(
+                  ([field]) => field !== "id" && field !== "standortPlz" && field !== "standortTyp" && field !== "standortStrasseHausnr").map(([key, value], index) => 
+                  JSON.stringify(value).replace(/"/g,' ')) }  {'\n'} 
+
+                  {Object.entries(mitarbeiter.mitarbeiterGruppe).filter(([field]) => field !== "id" && field !== "gruppeGroesse").map(([key, value], index) => 
+                  JSON.stringify(value).replace(/"/g,' ')) }  {'\n'}
+                  
                   </Card.Text> }
                 <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>
               </Card.Body>
