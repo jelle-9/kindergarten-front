@@ -18,18 +18,19 @@ export default function ElternListe() {
 return (
   <Row>
     {
-        eltern.map((eltern) => (
-
-          <Col  sm={4} md={3} lg={3} className='my-2'>
+        eltern.map((eltern, index) => (
+          <Col key={index} sm={4} md={3} lg={3} className='my-2'>
               <Card key = {eltern.elternId} style={{ width: '10rem' }}>
                   <Card.Img variant="top" src="resources\images.jpg" alt="Upps!" />
                   <Card.Body>
                       <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {eltern.elternVorname} <br/> {eltern.elternNachname} </Card.Title>
-                      
                       { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
                         
                           {eltern.elternStrasseHausnr} {'\n'}
-                          {eltern.elternPlz} {'\n'}
+                          {Object.entries(eltern.elternPlz).map(([key, value], index) => (
+                            JSON.stringify(value)
+                          ))
+                          } {'\n'}
                           {eltern.elternTelefonnummer} {'\n'}
                           {eltern.elternEmail} {'\n'}
                       

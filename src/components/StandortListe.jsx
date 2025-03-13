@@ -20,9 +20,9 @@ export default function StandortListe() {
   return (
     <Row>
         {
-            standorte.map((standort) => (
+            standorte.map((standort, index) => (
 
-                <Col  sm={4} md={3} lg={3} className='my-2'>
+                <Col key={index} sm={4} md={3} lg={3} className='my-2'>
                     <Card key = {standort.id} style={{ width: '10rem' }}>
                         <Card.Img variant="top" src="resources\images.jpg" alt="Upps!" />
                         <Card.Body>

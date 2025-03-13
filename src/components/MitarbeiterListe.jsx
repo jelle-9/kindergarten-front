@@ -15,12 +15,12 @@ export default function MitarbeiterListe() {
     setMitarbeiter(result.data);
     console.log(result.data);
   }
-  console.log(mitarbeiter);
+
   return (
     <Row>
       {
-        mitarbeiter.map((mitarbeiter) => (
-          <Col  sm={4} md={3} lg={3} className='my-2'>
+        mitarbeiter.map((mitarbeiter, index) => (
+          <Col key={index} sm={4} md={3} lg={3} className='my-2'>
             <Card key = {mitarbeiter.mitarbeiterId} style={{ width: '10rem' }}>
               <Card.Img variant="top" src="resources\mitarbeiter.jpg" alt="Psss!" />
               <Card.Body>
@@ -33,9 +33,9 @@ export default function MitarbeiterListe() {
                   {mitarbeiter.mitarbeiterGeburtsdatum} {'\n'}
                   {mitarbeiter.mitarbeiterTelefonnummer} {'\n'}
                   {mitarbeiter.mitarbeiterStrasseHausnr} {'\n'}
-                  {mitarbeiter.mitarbeiterPlz} {'\n'}    
+                  {/* {mitarbeiter.mitarbeiterPlz} {'\n'}     */}
                   {mitarbeiter.mitarbeiterStandort} {'\n'}
-                  {mitarbeiter.mitarbeiterGruppe} {'\n'}
+                  {/* {mitarbeiter.mitarbeiterGruppe} {'\n'} */}
                   
                   </Card.Text> }
                 <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>

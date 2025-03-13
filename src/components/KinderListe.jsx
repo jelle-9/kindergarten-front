@@ -19,9 +19,8 @@ export default function KinderListe() {
   return (
     <Row>
         {
-            kinder.map((kind) => (
-
-                <Col  sm={4} md={3} lg={3} className='my-2'>
+            kinder.map((kind, index) => (
+                <Col key={index} sm={4} md={3} lg={3} className='my-2'>
                     <Card key = {kind.kindId} style={{ width: '10rem' }}>
                         <Card.Img variant="top" src="resources\images.jpg" alt="Upps!" />
                         <Card.Body>

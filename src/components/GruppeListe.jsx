@@ -16,15 +16,11 @@ export default function GruppeListe() {
         console.log(result.data);
     }
 
-
-
-    console.log(gruppen);
   return (
     <Row>
         {
-            gruppen.map((gruppe) => (
-
-                <Col  sm={4} md={3} lg={3} className='my-2'>
+            gruppen.map((gruppe, index) => (
+                <Col key={index} sm={4} md={3} lg={3} className='my-2'>
                     <Card key = {gruppe.gruppeId} style={{ width: '10rem' }}>
                         <Card.Img variant="top" src="resources\eule.jpg" alt="Pups!" />
                         <Card.Body>
