@@ -34,7 +34,7 @@ export default function MitarbeiterListe() {
                   {mitarbeiter.mitarbeiterTelefonnummer} {'\n'}
                   {mitarbeiter.mitarbeiterStrasseHausnr} {'\n'}
                   {/* {mitarbeiter.mitarbeiterPlz} {'\n'}     */}
-                  {mitarbeiter.mitarbeiterStandort} {'\n'}
+                  {/* {mitarbeiter.mitarbeiterStandort} {'\n'} */}
                   {/* {mitarbeiter.mitarbeiterGruppe} {'\n'} */}
                   
                   </Card.Text> }

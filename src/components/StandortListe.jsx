@@ -30,7 +30,11 @@ export default function StandortListe() {
                             { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
                               
                                 {standort.standortTyp} {'\n'}
-                                {standort.standortStrasseHausnr}
+                                {standort.standortStrasseHausnr} {'\n'}
+                                {Object.entries(standort.standortPlz).map(([key, value], index) => (
+                                  JSON.stringify(value).replace(/"/g, ' ')
+                                ))
+                                } {'\n'}
                             
                             </Card.Text> }
                             <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>

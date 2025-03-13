@@ -28,7 +28,7 @@ return (
                         
                           {eltern.elternStrasseHausnr} {'\n'}
                           {Object.entries(eltern.elternPlz).map(([key, value], index) => (
-                            JSON.stringify(value)
+                            JSON.stringify(value).replace(/"/g, ' ')
                           ))
                           } {'\n'}
                           {eltern.elternTelefonnummer} {'\n'}
