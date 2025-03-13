@@ -24,9 +24,8 @@ export default function KinderListe() {
                     <Card key = {kind.kindId} style={{ width: '10rem' }}>
                         <Card.Img variant="top" src="resources\images.jpg" alt="Upps!" />
                         <Card.Body>
-                            <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {kind.kindVorname} </Card.Title>
+                            <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {kind.kindVorname} <br /> {kind.kindNachname} </Card.Title>
                             { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
-                                {kind.kindNachname} {'\n'}
                                 {kind.kindGeburtsdatum} {'\n'}
                                 {kind.besonderheiten} {'\n'}
                             

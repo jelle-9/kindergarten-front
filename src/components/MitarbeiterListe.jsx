@@ -24,19 +24,22 @@ export default function MitarbeiterListe() {
             <Card key = {mitarbeiter.mitarbeiterId} style={{ width: '10rem' }}>
               <Card.Img variant="top" src="resources\mitarbeiter.jpg" alt="Psss!" />
               <Card.Body>
-                <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {mitarbeiter.mitarbeiterVorname} </Card.Title>
+                <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {mitarbeiter.mitarbeiterVorname} <br /> {mitarbeiter.mitarbeiterNachname} </Card.Title>
                 { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
-                  {mitarbeiter.mitarbeiterVorname} {'\n'}
-                  {mitarbeiter.mitarbeiterNachname} {'\n'}
+                  
                   {mitarbeiter.mitarbeiterRolle} {'\n'}
                   {mitarbeiter.mitarbeiterEmail} {'\n'}
                   {mitarbeiter.mitarbeiterGeburtsdatum} {'\n'}
                   {mitarbeiter.mitarbeiterTelefonnummer} {'\n'}
                   {mitarbeiter.mitarbeiterStrasseHausnr} {'\n'}
-                  {/* {mitarbeiter.mitarbeiterPlz} {'\n'}     */}
-                  {mitarbeiter.mitarbeiterStandort} {'\n'}
-                  {/* {mitarbeiter.mitarbeiterGruppe} {'\n'} */}
-                  
+
+                  {Object.entries(mitarbeiter.mitarbeiterPlz).map(([key, value], index) => 
+                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'}
+                  {Object.entries(mitarbeiter.mitarbeiterStandort).map(([key, value], index) => 
+                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
+                  {Object.entries(mitarbeiter.mitarbeiterGruppe).map(([key, value], index) => 
+                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
+                 
                   </Card.Text> }
                 <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>
               </Card.Body>

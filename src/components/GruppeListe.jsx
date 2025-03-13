@@ -26,7 +26,6 @@ export default function GruppeListe() {
                         <Card.Body>
                             <Card.Title style={{fontSize: '15px', textAlign: 'center', fontWeight: 'bold'}}> {gruppe.gruppeName} </Card.Title>
                             { <Card.Text style={{fontSize: '10px', whiteSpace: 'pre-line', textAlign: 'center'}}>
-                                {gruppe.gruppeName} {'\n'}
                                 {gruppe.gruppeGroesse} {'\n'}
                                 {gruppe.gruppeLeiter} {'\n'}
                             
