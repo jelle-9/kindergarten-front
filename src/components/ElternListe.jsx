@@ -13,7 +13,6 @@ export default function ElternListe() {
   const loadEltern = async() => {
     const result = await axios.get("http://localhost:8080/eltern/getAllEltern");
     setEltern(result.data);
-    console.log(eltern);
   };
 return (
   <Row>

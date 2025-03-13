@@ -13,7 +13,6 @@ export default function GruppeListe() {
     const loadGruppen = async() => {
         const result = await axios.get("http://localhost:8080/getAllGruppe");
         setGruppen(result.data);
-        console.log(result.data);
     }
 
   return (

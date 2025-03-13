@@ -44,27 +44,22 @@ export default function MitarbeiterListe() {
                   
                   {
 
-                  Object.entries(mitarbeiter.mitarbeiterPlz).map((plz, index) => 
-                  // 
-                  plz[1]  + ' '
-                ) 
+                //   Object.entries(mitarbeiter.mitarbeiterPlz).map((plz, index) => 
+                //   // 
+                //   plz[1]  + ' '
+                // ) 
                   
-                  }  {'\n'}
+                  }
 
                   {
+                  // Object.entries(mitarbeiter.mitarbeiterStandort).map((standort, index) => 
 
-                    /* Alte */
-                  Object.entries(mitarbeiter.mitarbeiterStandort).map((standort, index) => 
+                  //       /* Alternative Lösung. die index muss bekannt sein */
+                  //       index==2 ? <span key={index}>{standort[1]}</span>: null
 
-                        /* Alternative Lösung. die index muss bekannt sein */
-                        index==2 ? <span key={index}>{standort[1]}</span>: null
-
-                  )
+                  // )
                   
-                  }  {'\n'} 
-
-                  {Object.entries(mitarbeiter.mitarbeiterGruppe).map(([key, value], index) => 
-                  JSON.stringify(value).replace(/"/g,'')) }  {'\n'} 
+                  }  
                  
                   </Card.Text> }
                 <Button style={{width: '7rem', height: '2rem', textAlign: 'center'}} >Bearbeiten</Button>

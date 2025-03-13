@@ -14,7 +14,7 @@ export default function Navigator(props) {
 
         {
             Object.entries(liste).map(([key, values], index) => (
-                <ListGroup.Item action href={`#${key}`}>
+                <ListGroup.Item key={index} action href={`#${key}`}>
                    {key}
                 </ListGroup.Item>
             ))

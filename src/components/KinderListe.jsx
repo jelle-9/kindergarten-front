@@ -13,9 +13,7 @@ export default function KinderListe() {
         const result = await axios.get("http://localhost:8080/getAllKinder");
         setKinder(result.data);
     }
-
-
-    console.log(kinder);
+    
   return (
     <Row>
         {

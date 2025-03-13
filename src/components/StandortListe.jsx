@@ -13,7 +13,6 @@ export default function StandortListe() {
 
   const loadStandorte = async() => {
     const result = await axios.get("http://localhost:8080/standort");
-    console.log(result.data);
     setStandort(result.data);
   }
 
