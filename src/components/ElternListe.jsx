@@ -3,6 +3,7 @@ import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Col, Row } from 'react-bootstrap';
+import '../styles/styles.css';
 
 export default function ElternListe() {
   const [eltern, setEltern] = useState([]);

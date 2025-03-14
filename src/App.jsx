@@ -3,9 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Tabsnavigator from './layouts/Tabsnavigator';
 import Mainlayout from './layouts/Mainlayout';
-import Cards from './layouts/Cards';
+
 
 
 function App() {
@@ -32,6 +31,7 @@ function App() {
         <Mainlayout />
         
       </div>
+     
      
       
 

@@ -8,6 +8,7 @@ import StandortListe from '../components/StandortListe'
 import GruppeListe from '../components/GruppeListe'
 import Formular from '../components/Formular'
 
+
 export default function Mainlayout() {
     
    const verwaltungsListe = {
@@ -32,7 +33,7 @@ export default function Mainlayout() {
             <Col sm={8}>
                 <Tab.Content>
 
-                    <Tab.Pane eventKey="#Kinder">Tab pane content 1
+                    <Tab.Pane eventKey="#Kinder">
                         
                         <KinderListe />
                 
@@ -73,4 +74,4 @@ export default function Mainlayout() {
         </Row>
    </Tab.Container>
   )
-}
+} 
