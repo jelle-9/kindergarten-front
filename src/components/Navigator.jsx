@@ -8,13 +8,13 @@ export default function Navigator(props) {
 
   return (
     <ListGroup>
-        <ListGroup.Item action href="#link1">
+        <ListGroup.Item  action href="#link1">
             Dashbord
         </ListGroup.Item>
 
         {
             Object.entries(liste).map(([key, values], index) => (
-                <ListGroup.Item key={index} action href={`#${key}`}>
+                <ListGroup.Item  key={index} action href={`#${key}`}>
                    {key}
                 </ListGroup.Item>
             ))

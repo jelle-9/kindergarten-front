@@ -7,6 +7,7 @@ import MitarbeiterListe from '../components/MitarbeiterListe'
 import StandortListe from '../components/StandortListe'
 import GruppeListe from '../components/GruppeListe'
 import Formular from '../components/Formular'
+import Footer from '../components/Foot'
 
 
 export default function Mainlayout() {
@@ -72,6 +73,8 @@ export default function Mainlayout() {
                 </Tab.Content>
             </Col>
         </Row>
+        <Footer />    
    </Tab.Container>
+
   )
 } 
